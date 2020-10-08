@@ -55,7 +55,8 @@ def read_more(request,cid):
     # file_content = f.read()
     # f.close()
     lang = ProgramLanguage.objects.get(id=cid)
-    params = {'language':lang, 'file_content':file_content}
+    # params = {'language':lang, 'file_content':file_content}
+    params = {'language':lang}
     return render(request, 'plm/read_more.html', params)
 
 import re

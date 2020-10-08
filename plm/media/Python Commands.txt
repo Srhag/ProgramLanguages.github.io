@@ -1,0 +1,14 @@
+mkvirtualenv --python=python3.8 MyEnv
+
+git add .
+git config --global user.name ""
+git config --global user.email ""
+
+git commit -m ""
+
+git remote add origin
+
+git push origin master
+
+git commit
+git stash
