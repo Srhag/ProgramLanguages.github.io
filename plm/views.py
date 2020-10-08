@@ -51,9 +51,9 @@ def load_more(request,category):
     return render(request, 'plm/load_more.html', params)
 
 def read_more(request,cid):
-    f = open('./plm/media/Python.txt', 'r')
-    file_content = f.read()
-    f.close()
+    # f = open('./plm/media/Python.txt', 'r')
+    # file_content = f.read()
+    # f.close()
     lang = ProgramLanguage.objects.get(id=cid)
     params = {'language':lang, 'file_content':file_content}
     return render(request, 'plm/read_more.html', params)
