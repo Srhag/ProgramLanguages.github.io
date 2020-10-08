@@ -1,0 +1,31 @@
+{% extends 'plm/base.html' %}
+
+{% block title %}{{language}}{% endblock %}
+
+{% block body %}
+    <br><br><br>
+<div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+            <center>
+                <img src='/plm/static/{{language.lang_img}}' class = "displayimage" alt="...">
+            </center>
+        </div>
+        <div class="col-8">
+            <h5>{{language.lang_name}}</h5>
+            <p>{{language.lang_short_desc}}</p>
+            {% if language.lang_saved %}
+              <a href="/plm/save/{{language.id}}" class="btn btn-primary card-button">Saved</a>
+            {% else %}
+              <a href="/plm/save/{{language.id}}" class="btn btn-primary card-button">Save</a>
+            {% endif %}
+        </div>      
+      </div>
+      <div class="row">
+        <br><br><br>
+        <p>{{language.lang_brief_desc|safe}}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,140 @@
+.navbar-brand
+{
+    margin-left: 4.25rem;
+}
+
+.carousel-inner, .slide-image
+{
+    height: 400px;
+    margin: auto;
+}
+
+.cards
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card
+{
+    border-radius: 8.5rem;
+}
+
+.card-footer
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.cardimage
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 15px 50px;
+    height: 200px;
+    width: 100%;
+}
+
+.card-img-top
+{
+    height : 100%;
+    width : auto;
+    border-radius: 4.5rem;
+    max-width: 100%;
+}
+
+.card-button
+{
+    border-radius: 1.5rem;
+}
+
+.card-text:last-child
+{
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.save-button
+{
+    margin-left: 5px;
+    margin-right: 4.25rem;
+}
+
+.card-title
+{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.card-load-button
+{
+    font-weight: 100;
+    padding: 0.375rem .50rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.displayimage
+{
+    height: 200px;
+    max-width: 100%;
+}
+
+.footer
+{
+    background-color: black;
+    text-align: center;
+    color: white;
+    position:relative;
+    width : 100%;
+    bottom : 0;
+}
+
+.content
+{
+    min-height: 83.2vh;
+}
+
+@media (max-width: 992px)
+{
+    .navbar-brand
+    {
+        margin-left: 0px!important;
+    }
+    .save-button
+    {
+        margin : 0px!important
+    }
+}
+
+@media(max-width: 576px)
+{
+    .my-2
+    {
+        margin-bottom: 0.25rem!important;
+    }
+}
+
+@media(max-width:992px) and (min-width:768px)
+{
+    .card-button
+    {
+        padding: 0.155rem .25rem;
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+    .card-footer
+    {
+        padding-bottom: 22px;
+    }
+}
+
+@media(max-width:1199px) and (min-width:992px)
+{
+    .card-footer
+    {
+        padding-bottom: 30px;
+    }
+}

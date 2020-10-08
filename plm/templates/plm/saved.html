@@ -1,0 +1,29 @@
+{% extends 'plm/base.html' %}
+
+{% block title %}Saved{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="container cards">
+      {% load static %}
+      <div class="row row-cols-1 row-cols-md-3">
+        {% for item in languages %}
+        <div class="col mb-4">
+          <div class="card h-100 text-center">
+            <div class="cardimage">
+            <img src='/plm/static/{{item.lang_img}}' class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{item.lang_name}}</h5>
+              <p class="card-text">{{item.lang_short_desc}}</p>
+            </div>
+            <div class="card-footer">
+              <a href="/plm/read_more_language/{{item.id}}" class="btn btn-primary card-button">Read More</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+{% endblock %}
