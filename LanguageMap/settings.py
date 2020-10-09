@@ -25,7 +25,7 @@ SECRET_KEY = 'lyj8b$)1mkk)ndntlp=g+t(a(9e+ri)=m6bf6n^_-i218#&8yg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['srhag.pythonanywhere.com']
+ALLOWED_HOSTS = ['srhag.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition

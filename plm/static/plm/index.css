@@ -118,6 +118,10 @@
     {
         margin-bottom: 0.25rem!important;
     }
+    .carousel-inner, .slide-image
+    {
+        height: 150px;
+    }
 }
 
 @media(max-width: 768px)
@@ -160,5 +164,13 @@
     .card-footer
     {
         padding-bottom: 30px;
+    }
+}
+
+@media(max-width:768px) and (min-width:576px)
+{
+    .carousel-inner, .slide-image
+    {
+        height: 300px;
     }
 }
