@@ -76,9 +76,10 @@ function load_saved()
     {
         langObj = JSON.parse(lang);
     }
-    if(Array.from(btns).length==0)
+    console.log(Array.from(langObj).length);
+    if(Array.from(langObj).length==0)
     {
-        document.getElementById(`${element.innerText}`).innerHTML = "<div><h3>No Saved Languages</h3></div>";        
+        document.getElementById('cards').innerHTML = "<div><h3>No Saved Languages</h3></div>";        
     }
     else
     {
@@ -87,7 +88,7 @@ function load_saved()
             {
                 document.getElementById(`${element.innerText}`).style.display = 'none';
             }
-        });    
+        });        
     }
 }
 
