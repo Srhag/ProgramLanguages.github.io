@@ -1,14 +1,13 @@
 {% extends 'plm/base.html' %}
 
-{% block title %}{{category.0.lang_category}} {% endblock %}
+{% block title %}Saved{% endblock %}
 
 {% block body %}
 <div class="content">
-    <center><h2>{{category.0.lang_category}}</h2></center>
     <div class="container cards">
       {% load static %}
       <div class="row row-cols-1 row-cols-md-3">
-        {% for item in category %}
+        {% for item in languages %}
         <div class="col mb-4">
           <div class="card h-100 text-center">
             <div class="cardimage">
@@ -20,7 +19,6 @@
             </div>
             <div class="card-footer">
               <a href="/plm/read_more_language/{{item.id}}" class="btn btn-primary card-button">Read More</a>
-              <button id="save_{{item.lang_name}}" name="{{item.lang_name}}" onclick="save_lang(this.name)" class="btn btn-primary card-button save_button"></button>
             </div>
           </div>
         </div>

@@ -4,14 +4,14 @@
 
 {% block body %}
 <div class="content">
-    <div class="container cards">
+  <div class="container cards">
       {% load static %}
       <div class="row row-cols-1 row-cols-md-3">
         {% for item in languages %}
-        <div class="col mb-4">
+        <div class="col mb-4" id="{{item.lang_name}}">
           <div class="card h-100 text-center">
             <div class="cardimage">
-            <img src='/plm/static/{{item.lang_img}}' class="card-img-top" alt="...">
+              <img src='/plm/static/{{item.lang_img}}' class="card-img-top" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title">{{item.lang_name}}</h5>
@@ -19,11 +19,15 @@
             </div>
             <div class="card-footer">
               <a href="/plm/read_more_language/{{item.id}}" class="btn btn-primary card-button">Read More</a>
+              <button id="save_{{item.lang_name}}" name="{{item.lang_name}}" onclick="reload_saved(this.name)" class="btn btn-primary card-button save_button"></button>
             </div>
           </div>
         </div>
         {% endfor %}
       </div>
     </div>
-</div>
+  </div>
+
+<script>showSaved();</script>
+<script>load_saved();</script>
 {% endblock %}

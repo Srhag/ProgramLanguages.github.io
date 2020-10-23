@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'plm/index.css' %}">
+    <link rel="icon" href="{% static 'plm/images/Programmer.png' %}" type="image/png" sizes="16x16">
     <title>{% block title %} {% endblock%}</title>
   </head>
   <body>
+    <script src="{% static 'plm/index.js' %}"></script>
     <div class="fluid-container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/plm/">LanguageMap</a>

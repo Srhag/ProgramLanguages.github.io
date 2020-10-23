@@ -4,9 +4,9 @@
 
 {% block body %}
 <div class="content">
-  <div class="fluid-container carousel">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+    <div class="fluid-container carousel">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
@@ -48,7 +48,7 @@
         </a>
       </div>
     </div>
-    
+
     <div class="container cards">
       {% load static %}
       {% for category,languages in lang.items %}
@@ -60,7 +60,7 @@
         <div class="col mb-4">
           <div class="card h-100 text-center">
             <div class="cardimage">
-              <img src='/plm/static/{{item.lang_img}}' class="card-img-top" alt="...">
+            <img src='/plm/static/{{item.lang_img}}' class="card-img-top" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title">{{item.lang_name}}</h5>
@@ -68,7 +68,11 @@
             </div>
             <div class="card-footer">
               <a href="/plm/read_more_language/{{item.id}}" class="btn btn-primary card-button">Read More</a>
-              <button id="save_{{item.lang_name}}" name="{{item.lang_name}}" onclick="save_lang(this.name)" class="btn btn-primary card-button save_button"></button>
+              {% if item.lang_saved %}
+              <a href="/plm/save/{{item.id}}" class="btn btn-primary card-button">Saved</a>
+              {% else %}
+              <a href="/plm/save/{{item.id}}" class="btn btn-primary card-button">Save</a>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -79,6 +83,5 @@
       <br><br><br>
       {% endfor %}
     </div>
-  </div>   
-<script>showSaved();</script>
+</div>    
 {% endblock %}

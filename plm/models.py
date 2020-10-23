@@ -8,7 +8,7 @@ class ProgramLanguage(models.Model):
     lang_short_desc = models.TextField()
     lang_brief_desc = models.TextField()
     lang_img = models.ImageField(upload_to="plm/images",default = "Individual")
-    lang_saved = models.BooleanField(default=False)
+    # lang_saved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.lang_name

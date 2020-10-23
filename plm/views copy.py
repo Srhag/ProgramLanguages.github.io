@@ -26,9 +26,8 @@ def category(request):
     return render(request, 'plm/category.html')
 
 def saved(request):
-    lang = ProgramLanguage.objects.all();
+    lang = ProgramLanguage.objects.filter(lang_saved=True)
     params = {'languages':lang}
-    # print(params);
     return render(request, 'plm/saved.html', params)
 
 def save(request,cid):
