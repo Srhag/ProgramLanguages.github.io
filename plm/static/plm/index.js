@@ -71,18 +71,24 @@ function load_saved()
     if(lang==null)
     {
         langObj = [];
-        document.getElementById(`${element.innerText}`).innerHTML = "<div><h3>No Saved Languages</h3></div>";
     }
     else
     {
         langObj = JSON.parse(lang);
     }
-    Array.from(btns).forEach(function(element){
-        if(!langObj.includes(element.innerText))
-        {
-            document.getElementById(`${element.innerText}`).style.display = 'none';
-        }
-    });
+    if(Array.from(btns).length==0)
+    {
+        document.getElementById(`${element.innerText}`).innerHTML = "<div><h3>No Saved Languages</h3></div>";        
+    }
+    else
+    {
+        Array.from(btns).forEach(function(element){
+            if(!langObj.includes(element.innerText))
+            {
+                document.getElementById(`${element.innerText}`).style.display = 'none';
+            }
+        });    
+    }
 }
 
 function reload_saved(name)
