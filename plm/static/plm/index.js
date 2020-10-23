@@ -71,6 +71,7 @@ function load_saved()
     if(lang==null)
     {
         langObj = [];
+        document.getElementById(`${element.innerText}`).innerHTML = "<div><h3>No Saved Languages</h3></div>";
     }
     else
     {
